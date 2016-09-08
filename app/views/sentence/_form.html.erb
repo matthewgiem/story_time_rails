@@ -1,0 +1,9 @@
+<%= render "layouts/errors", :object => @sentence %>
+
+<%= form_for [@story, @sentence] do |f| %>
+  <%= f.label :sentence %>
+  <%= f.text_field :sentence %>
+  <%= f.label :user %>
+  <%= f.text_field :user %>
+  <%= f.submit %>
+<% end %>

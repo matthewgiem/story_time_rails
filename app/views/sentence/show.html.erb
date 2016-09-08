@@ -1,0 +1,9 @@
+<h1><%= @sentence.sentence %></h1>
+
+
+<p><%= link_to "Edit", edit_story_sentence_path(@story) %></p>
+<p><%= link_to "Delete", sentence_path(@sentence), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+
+
+
+<%= link_to "Return to #{@sentence.story.title}", story_path(@sentence.story) %>

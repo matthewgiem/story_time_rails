@@ -1,0 +1,14 @@
+<h1><%= @story.title %></h1>
+<% @story.sentences.each do |sentence| %>
+  <h3><%= link_to sentence.title, story_sentence_path(@story, sentence)%></h3>
+<% end %>
+
+
+<p><%= link_to "Add a Sentence", new_story_sentence_path(@story) %></p>
+
+<p><%= link_to "Edit", edit_story_path(@story) %></p>
+<p><%= link_to "Delete", story_path(@story), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+
+
+
+<%= link_to "Return to Courses", stories_path %>
