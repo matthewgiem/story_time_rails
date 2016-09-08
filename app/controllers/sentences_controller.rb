@@ -50,7 +50,7 @@ class SentencesController < ApplicationController
 
   private
   def sentence_params
-    params.require(:sentence).permit(:sentence, :user)
+    params.require(:sentence).permit(:sentence, :user, :picture)
   end
 
 end
