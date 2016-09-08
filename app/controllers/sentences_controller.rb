@@ -9,6 +9,8 @@ class SentencesController < ApplicationController
   end
 
   def new
+    picture_array = ["/assets/img/cat.jpeg", "/assets/img/hello_thai.png", "/assets/img/hello.png", "/assets/img/monkey.jpeg", "/assets/img/rubix_cube.jpeg", "/assets/img/the_letter_p.png"]
+    @picture = picture_array[rand(6) - 1]
     @story = Story.find(params[:story_id])
     @sentence = @story.sentences.new
   end

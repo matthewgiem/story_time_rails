@@ -1,5 +1,8 @@
 <%= render "layouts/errors", :object => @sentence %>
 
+<h2>use the following picture to help you write a sentence</h2>
+<img src=<%= @picture %> alt="<%= @picture %>" />
+
 <%= form_for [@story, @sentence] do |f| %>
   <%= f.label :sentence %>
   <%= f.text_field :sentence %>
